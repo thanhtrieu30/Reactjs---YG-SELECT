@@ -68,6 +68,7 @@
 .icon {
     font-size: 60px;
     transition: width 2s, height 2s, background-color 2s, transform 2s;
+    color: lightcoral;
 }
 
 .icon:hover {

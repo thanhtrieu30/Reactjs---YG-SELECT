@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/signup.css'
 import imgyg from '../assets/images/logo.png'
+import { SignUpForm } from '../components/Auth/components/signupForm/SignUpForm'
 
 const SignUp = () => {
   return (
@@ -14,7 +15,7 @@ const SignUp = () => {
         </div>
       </div>
       <div className='form__sign'>
-            <h3>hello</h3>
+            <SignUpForm />
       </div>
     </div>
   )
