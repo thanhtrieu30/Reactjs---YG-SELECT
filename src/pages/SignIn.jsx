@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/signup.css'
 import imgyg from '../assets/images/logo.png'
+import SignInForm from '../components/Auth/components/signinForm/SignInForm'
 
 const SignIn = () => {
   return (
@@ -12,6 +13,9 @@ const SignIn = () => {
             <img src={imgyg} alt="imgyg" />
             <h3>Sign in to your account</h3>
         </div>
+      </div>
+      <div className='form__sign'>
+        <SignInForm />
       </div>
     </div>
   )

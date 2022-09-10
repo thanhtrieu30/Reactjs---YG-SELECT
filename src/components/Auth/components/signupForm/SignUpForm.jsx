@@ -1,7 +1,7 @@
 
 import React, { useRef } from 'react';
 import '../../../../styles/signupForm.css';
-
+import {Link} from 'react-router-dom'
 
 import {useForm} from 'react-hook-form';
  
@@ -10,8 +10,8 @@ export function SignUpForm() {
   const {register , handleSubmit , formState: { errors } , reset , watch } = useForm();
   const password = useRef({});
   password.current = watch("password", "");
+
   const onSubmit =  (values) => {
-    
     reset();
     console.log(values)
  };
@@ -77,6 +77,7 @@ export function SignUpForm() {
       )}
 
       <button type="submit" >Sign Up</button>
+      <div className='pageSignup'>You already an account ? <Link to='/signin'> <span>Sign In</span></Link></div>
     </form>
   );
 };
