@@ -4,12 +4,17 @@ import {Link} from 'react-router-dom'
 import american from '../../assets/images/america.png'
 import logo from '../../assets/images/logo.png'
 
-
+import {useSelector} from 'react-redux'
 
 import '../../styles/header.css'
 import HeaderMenu from '../UI/HeaderMenu';
 
 const Header = () => {
+
+  const totalQuantity = useSelector(state=> state.cart);
+  const totalItems = totalQuantity.reduce((total,product) => {
+        return total + product.qty;
+  },0)
   return (
     <div >
         <div className='top__header'>
@@ -37,7 +42,7 @@ const Header = () => {
                 <div className='bottom__header__icon'>
                       <i class="ri-search-eye-line"></i>
                       <i class="ri-hearts-line"></i>
-                      <i class="ri-shopping-bag-line"></i>
+                     <Link to='/cart'>  <i class="ri-shopping-bag-line">({totalItems})</i></Link>
                       
                 </div>
               </div>

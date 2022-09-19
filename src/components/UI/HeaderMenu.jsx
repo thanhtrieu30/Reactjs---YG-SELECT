@@ -2,43 +2,47 @@ import React from 'react'
 import {NavLink } from 'react-router-dom'
 import '../../styles/headermenu.css'
 
+
+
 const nav__link = [
     {
-        display: 'ARTIST',
-        path: '/artist'
+        display: 'HOME',
+        path: '/home'
     },
     {
-        display: 'CATEGORY',
-        path: '/category'
+        display: 'PRODUCTS',
+        path: '/product'
     },
     {
         display: 'SELECT',
-        path: '/select'
+        path: '/updating'
     },
     {
-        display: 'CUSTOM',
-        path: '/custom'
+        display: 'CONTACT',
+        path: '/updating'
     },
 ]
 
 const nav__link2 = [
     {
         display: 'EVENT',
-        path: '/event'
+        path: '/updating'
     },
     {
         display: 'STORY',
-        path: '/story'
+        path: '/updating'
     },
     {
         display: 'REVIEW',
-        path: '/review'
+        path: '/updating'
     },
     
 ]
 
 
 const HeaderMenu = () => {
+
+    
   return (
     <div className='menu'>
         {
